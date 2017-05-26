@@ -4,22 +4,22 @@
 	<classPathEntry location="mysql-connector-java-5.1.36.jar" />
 	<context id="context1" targetRuntime="MyBatis3">
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://115.28.7.40:3306/real_estate" userId="root"
+			connectionURL="jdbc:mysql://localhost:3306/anti_fraud" userId="root"
 			password="root">
 		</jdbcConnection>
-		<javaModelGenerator targetPackage="com.alibaba.webx.common.po.financial"
-			targetProject="src1" />
+		<javaModelGenerator targetPackage="po"
+			targetProject="src" />
 
-		<sqlMapGenerator targetPackage="com.alibaba.webx.common.dao"
-			targetProject="src1" />
+		<sqlMapGenerator targetPackage="dao"
+			targetProject="src" />
 
-		<javaClientGenerator targetPackage="com.alibaba.webx.common.po.financial"
-			targetProject="src1" type="XMLMAPPER" />
+		<javaClientGenerator targetPackage="po"
+			targetProject="src" type="XMLMAPPER" />
 
-		<table schema="root" tableName="rate"
-			domainObjectName="Rate" enableCountByExample="false"
+		<table schema="root" tableName="face_verify_log"
+			domainObjectName="LogModel" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false" />
+
 	</context>
 </generatorConfiguration>
-
